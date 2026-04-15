@@ -5,13 +5,25 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-st.set_page_config(layout="wide", initial_sidebar_state="expanded")
+from PIL import Image
 
-st.title("📊 DCF Valuation Dashboard")
+
+st.markdown(
+    "<h1 style='text-align: center; color: #2E86C1;'>DCF Valuation Pro | by Aqeel Ansari</h1>",
+    unsafe_allow_html=True
+)
+
+st.markdown(
+    "<p style='text-align: center;'>Equity Valuation | PSX Analysis Tool</p>",
+    unsafe_allow_html=True
+)
+
 
 # -------------------------------
 # SIDEBAR
 # -------------------------------
+st.sidebar.image("logo.png", width=100)
+st.sidebar.markdown("## DCF Valuation Pro")
 st.sidebar.header("Global Inputs")
 
 company_name = st.sidebar.text_input("Enter Company Name", "")
@@ -328,3 +340,9 @@ with tab3:
 
     else:
         st.warning("Please enter valid revenue and shares data.")
+
+st.markdown("---")
+st.markdown(
+    "<p style='text-align: center;'>Developed by Aqeel Ansari | +923334971073 | DCF Valuation Tool</p>",
+    unsafe_allow_html=True
+)
